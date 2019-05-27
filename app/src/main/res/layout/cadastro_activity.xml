@@ -7,12 +7,12 @@
 
     <TextView
             android:text="Cadastrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="196dp"
+            android:layout_height="61dp"
             android:id="@+id/textView"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView5" android:layout_marginTop="134dp"
-            android:layout_marginStart="9dp" android:layout_marginBottom="61dp"
+            android:layout_marginBottom="61dp"
             app:layout_constraintBottom_toTopOf="@+id/textView5"/>
     <EditText
             android:layout_width="wrap_content"
@@ -25,17 +25,17 @@
             app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="Login"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="47dp"
+            android:layout_height="19dp"
             android:id="@+id/textView5"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintEnd_toEndOf="@+id/textView6"
             app:layout_constraintBottom_toTopOf="@+id/editText" app:layout_constraintStart_toStartOf="@+id/editText"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="Senha"
-            android:layout_width="59dp"
-            android:layout_height="0dp"
+            android:layout_width="48dp"
+            android:layout_height="19dp"
             android:id="@+id/textView6"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintStart_toStartOf="@+id/editText" app:layout_constraintTop_toBottomOf="@+id/editText"

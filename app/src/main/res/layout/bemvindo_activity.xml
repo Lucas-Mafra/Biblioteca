@@ -11,6 +11,6 @@
             android:layout_height="35dp"
             android:id="@+id/textView7"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="93dp"
-            android:layout_marginStart="49dp"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="80dp"
+            android:layout_marginStart="44dp"/>
 </android.support.constraint.ConstraintLayout>
