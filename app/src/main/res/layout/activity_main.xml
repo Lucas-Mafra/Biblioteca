@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/editTextLogin"
             app:layout_constraintTop_toBottomOf="@+id/textView4" android:layout_marginBottom="61dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -34,8 +34,8 @@
             android:layout_height="23dp"
             android:id="@+id/textView3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintBottom_toTopOf="@+id/editText3" app:layout_constraintStart_toStartOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLogin" app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/editTextsenha" app:layout_constraintStart_toStartOf="@+id/editTextLogin"
             android:layout_marginStart="2dp" android:layout_marginEnd="2dp"
     />
     <TextView
@@ -44,30 +44,30 @@
             android:layout_height="19dp"
             android:id="@+id/textView4"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintStart_toStartOf="@+id/editText2" app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"/>
+            app:layout_constraintStart_toStartOf="@+id/editTextLogin" app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLogin"/>
     <EditText
             android:layout_width="212dp"
             android:layout_height="0dp"
             android:inputType="numberPassword"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/editTextsenha"
             app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginBottom="40dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.492"/>
     <Button
             android:text="Login"
             android:layout_width="103dp"
             android:layout_height="0dp"
-            android:id="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" android:layout_marginBottom="13dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/button3"
+            android:id="@+id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@+id/editTextsenha" android:layout_marginBottom="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/CadastroAi"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.493"/>
     <Button
             android:text="Cadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button3"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/button2"
-            android:layout_marginBottom="80dp" app:layout_constraintEnd_toEndOf="@+id/button2"/>
+            android:id="@+id/CadastroAi"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+            android:layout_marginBottom="80dp" app:layout_constraintEnd_toEndOf="@+id/buttonLogin"/>
 </android.support.constraint.ConstraintLayout>
