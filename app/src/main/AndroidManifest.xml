@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".Cadastro"/>
         <activity android:name=".Bemvindo"/>
+        <activity android:name=".listadelivros"/>
     </application>
 
 </manifest>
