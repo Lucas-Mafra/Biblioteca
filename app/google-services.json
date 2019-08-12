@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "893168084328",
+    "firebase_url": "https://biblio-b20ae.firebaseio.com",
+    "project_id": "biblio-b20ae",
+    "storage_bucket": "biblio-b20ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893168084328:android:53604db18bc6db68",
+        "android_client_info": {
+          "package_name": "com.example.lol.biblioteca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893168084328-36g9319gl92gjun4o6u9c87m2eo5ck6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lol.biblioteca",
+            "certificate_hash": "ff0e41bfe01a44ad80d9f89024675d65a959929d"
+          }
+        },
+        {
+          "client_id": "893168084328-7l9lgu5i0tfgljbrtl9v0u3a8jdgdudq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIaK3k48IzczZOTRfKrvfgQo4Qhb5gjC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893168084328-7l9lgu5i0tfgljbrtl9v0u3a8jdgdudq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
