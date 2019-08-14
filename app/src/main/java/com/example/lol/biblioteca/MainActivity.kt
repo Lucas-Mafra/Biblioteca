@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
+//CLASSE PARA A ACTIVTY DE LOGIN
+
 class MainActivity : AppCompatActivity() {
     private val  NEXT_ACTIVITY_REQUEST_CODE = 1
     //private var Login = editTextLogin
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                 val params = Bundle()
                 params.putString("usuario", login)
-                val intent = Intent(this, Bemvindo::class.java)
+                //val intent = Intent(this, Bemvindo::class.java)
                 intent.putExtras(params)
                 startActivity(intent)
 

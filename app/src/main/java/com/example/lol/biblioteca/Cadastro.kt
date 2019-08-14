@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.cadastro_activity.*
 
+//CLASS PARA A ACTIVITY DE CADASTRO
+
 class Cadastro : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
