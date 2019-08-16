@@ -16,7 +16,7 @@ class Livros : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.livros_activity)
-
+        setSupportActionBar(findViewById(R.id.Toolbar_Livros))
         var lista = mutableListOf<Listalivros>()
 
         //adicionar dados na lsita
