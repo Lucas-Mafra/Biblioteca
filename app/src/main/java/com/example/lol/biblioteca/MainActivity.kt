@@ -12,8 +12,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val  NEXT_ACTIVITY_REQUEST_CODE = 1
-    //private var Login = editTextLogin
-    //private var senha = editTextsenha
+    private var Login = editTextLogin
+    private var senha = editTextsenha
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                 val params = Bundle()
                 params.putString("usuario", login)
-                //val intent = Intent(this, Bemvindo::class.java)
+                val intent = Intent(this, Livros::class.java)
                 intent.putExtras(params)
                 startActivity(intent)
 
