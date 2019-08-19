@@ -2,9 +2,9 @@ package com.example.lol.biblioteca
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.cadastro_activity.*
 
 //CLASS PARA A ACTIVITY DE CADASTRO
