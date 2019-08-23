@@ -20,13 +20,13 @@ class Livros : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.Toolbar_Livros))
         var lista = mutableListOf<Listalivros>()
 
-        //adicionar dados na lsita
-        /*
-        var avatar = (R.drawable.avatar_android)
+
+
+        var avatar = (R.drawable.capa)
         for(i in 1..100){
-            lista.add(Listalivros())
+            lista.add(Listalivros( avatar , "Bom titulo $i", "Bom autor $i", "EDITORA SHOW $i", "$i" ))
         }
-        */
+
 
         viewManager = LinearLayoutManager(this)
         viewAdapter = MyAdapter(lista)
