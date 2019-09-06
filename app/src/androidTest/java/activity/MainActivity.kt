@@ -1,14 +1,12 @@
-package com.example.lol.biblioteca
+package activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.webkit.WebView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.lol.biblioteca.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 //CLASSE PARA A ACTIVTY DE LOGIN
@@ -22,14 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-       val db = FirebaseFirestore.getInstance()
-       val usuario = mapOf<Any, Any>("nome" to "Lucas", "idade" to 16, "cidades" to listOf("Recife", "João Pessoa"))
-       db.collection("usuarios").document("llmm").set(usuario)
-           .addOnSuccessListener { Log.d("BANCODADOS", "usuario cadastrado com sucesso") }
-           .addOnFailureListener{Log.d("BANCODADO", "erro de gravação")}
-        db.collection("usuarios").document("llmm").update("idade", 17)
-
        var buttonLog = findViewById<Button>(R.id.buttonLogin)
         login = findViewById<EditText>(R.id.editTextLogin)
         senha = findViewById<EditText>(R.id.editTextsenha)
@@ -42,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
                 val params = Bundle()
                 params.putString("usuario", login)
-                val intent = Intent(this, Livros::class.java)
+                val intent = Intent(this, Activity.Livros::class.java)
                 intent.putExtras(params)
                 startActivity(intent)
 
@@ -53,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         CadastroAi.setOnClickListener{
-            val nextIntent = Intent(this, Cadastro::class.java)
+            val nextIntent = Intent(this, Activity.Cadastro::class.java)
             startActivity(nextIntent)
         }
 

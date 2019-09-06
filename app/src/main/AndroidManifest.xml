@@ -12,18 +12,22 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <!--O "NoActionBar faz com que o sistema não utilize o actionbar padrão-->
-
-        <activity android:name=".MainActivity">
-
+        <activity
+                android:name=".CategoriasLivros"
+                android:label="@string/title_activity_categorias_livros"
+                android:theme="@style/NoActionBar">
+        </activity>
+        <!-- O "NoActionBar faz com que o sistema não utilize o actionbar padrão -->
+        <activity android:name="activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Cadastro"/>
-        <activity android:name=".Livros"/>
+        <activity android:name="activity.Cadastro"/>
+        <activity android:name="activity.Livros"/>
+        <activity android:name="activity.CadastrarLivro"/>
     </application>
 
 </manifest>

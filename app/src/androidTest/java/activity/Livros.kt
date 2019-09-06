@@ -1,11 +1,12 @@
-package com.example.lol.biblioteca
+package activity
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import classes.Listalivros
+import com.example.lol.biblioteca.R
 import kotlinx.android.synthetic.main.livros_activity.*
 
 //A RV EM SI
@@ -22,14 +23,15 @@ class Livros : AppCompatActivity() {
         var lista = mutableListOf<Listalivros>()
 
 
-
+/*
+        Mostrar na RV
         var avatar = (R.drawable.capa)
         for(i in 1..100){
             lista.add(Listalivros( avatar , "Bom titulo $i", "Bom autor $i", "editora boa $i", "$i" ))
         }
-
+*/
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(lista)
+        viewAdapter = adapter.MyAdapter(lista)
 
         rvLista.adapter = viewAdapter
         rvLista.layoutManager = viewManager
@@ -41,6 +43,7 @@ class Livros : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu, menu)
         return true
     }
+
 /*
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId==R.id.menu_Search){
