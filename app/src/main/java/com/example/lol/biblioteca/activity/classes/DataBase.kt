@@ -1,4 +1,4 @@
-package classes
+package com.example.lol.biblioteca.activity.classes
 
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentSnapshot

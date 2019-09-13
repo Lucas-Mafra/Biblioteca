@@ -1,4 +1,4 @@
-package objects
+package com.example.lol.biblioteca.activity.objects
 
 import android.content.Context
 import android.net.ConnectivityManager

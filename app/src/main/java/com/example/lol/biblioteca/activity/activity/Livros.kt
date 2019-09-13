@@ -1,12 +1,14 @@
-package activity
+package com.example.lol.biblioteca.activity.activity
 
+import android.content.Intent
 import android.os.Bundle
+import com.example.lol.biblioteca.activity.adapter.MyAdapter
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import classes.Listalivros
 import com.example.lol.biblioteca.R
+import com.example.lol.biblioteca.activity.classes.Listalivros
 import kotlinx.android.synthetic.main.livros_activity.*
 
 //A RV EM SI
@@ -31,11 +33,10 @@ class Livros : AppCompatActivity() {
         }
 */
         viewManager = LinearLayoutManager(this)
-        viewAdapter = adapter.MyAdapter(lista)
+        viewAdapter = MyAdapter(lista)
 
         rvLista.adapter = viewAdapter
         rvLista.layoutManager = viewManager
-
 
     }
 

@@ -1,4 +1,4 @@
-package activity
+package com.example.lol.biblioteca.activity.activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       var buttonLog = findViewById<Button>(R.id.buttonLogin)
+       var buttonLog = findViewById<Button>(R.
+           id.buttonLogin)
         login = findViewById<EditText>(R.id.editTextLogin)
         senha = findViewById<EditText>(R.id.editTextsenha)
 
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
                 val params = Bundle()
                 params.putString("usuario", login)
-                val intent = Intent(this, Activity.Livros::class.java)
+                val intent = Intent(this, Livros::class.java)
                 intent.putExtras(params)
                 startActivity(intent)
 
@@ -42,8 +43,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnCadastrarLivro.setOnClickListener{
+            val nextIntent = Intent(this, CadastrarLivro::class.java)
+            startActivity(nextIntent)
+        }
         CadastroAi.setOnClickListener{
-            val nextIntent = Intent(this, Activity.Cadastro::class.java)
+            val nextIntent = Intent(this, Cadastro::class.java)
             startActivity(nextIntent)
         }
 

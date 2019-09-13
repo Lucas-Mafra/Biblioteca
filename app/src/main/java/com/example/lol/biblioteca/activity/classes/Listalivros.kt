@@ -1,4 +1,4 @@
-package classes
+package com.example.lol.biblioteca.activity.classes
 
 //DATA CLASS PARA O RV DOS LIVROS
 

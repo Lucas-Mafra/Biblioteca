@@ -1,11 +1,11 @@
-package adapter
+package com.example.lol.biblioteca.activity.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import classes.Listalivros
 import com.example.lol.biblioteca.R
+import com.example.lol.biblioteca.activity.classes.Listalivros
 import kotlinx.android.synthetic.main.lista_livros.view.*
 
 class MyAdapter(var lista : MutableList<Listalivros>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>(){

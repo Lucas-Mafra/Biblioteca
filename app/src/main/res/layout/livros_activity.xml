@@ -4,11 +4,11 @@
                                             xmlns:app="http://schemas.android.com/apk/res-auto"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            tools:context="activity.Livros">
+                                            tools:context=".activity.activity.Livros">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="419dp"
+            android:layout_height="665dp"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/rvLista" android:layout_marginTop="68dp" app:layout_constraintTop_toTopOf="parent"
     />
