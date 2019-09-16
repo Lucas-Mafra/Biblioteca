@@ -17,23 +17,18 @@ class Livros : AppCompatActivity() {
 
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var listalivros: ArrayList<Listalivros>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.livros_activity)
         setSupportActionBar(findViewById(R.id.Toolbar_Livros))
-        var lista = mutableListOf<Listalivros>()
+        setTitle("Livros da biblioteca")
 
-
-/*
-        Mostrar na RV
-        var avatar = (R.drawable.capa)
-        for(i in 1..100){
-            lista.add(Listalivros( avatar , "Bom titulo $i", "Bom autor $i", "editora boa $i", "$i" ))
-        }
-*/
+        listalivros = intent.getParcelableArrayListExtra<Listalivros>("Livros")
         viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(lista)
+        viewAdapter = MyAdapter(listalivros)
 
         rvLista.adapter = viewAdapter
         rvLista.layoutManager = viewManager

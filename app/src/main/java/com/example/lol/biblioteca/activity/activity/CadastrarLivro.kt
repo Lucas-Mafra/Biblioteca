@@ -24,37 +24,39 @@ class CadastrarLivro: AppCompatActivity() {
             salvarLivro()
         }
     }
-    /*
-    private fun consultarLivros(){
+
+    /* private fun consultarLivros() {
         if (Util.isDeviceConnected(this)) {
             val task = DataBase().consultar("Biblioteca")
             val listaLivros = ArrayList<Listalivros>()
             progressBar.visibility = View.VISIBLE
             task?.addOnSuccessListener { result ->
                 progressBar.visibility = View.GONE
-                if(result != null){
-                    result.forEach(){
-                        var aluno = Listalivros(it.data["avatar"].toString().toInt(),
-                                                it.data["TituloLivro"].toString(),
-                                                it.data["AutorLivro"].toString(),
-                                                it.data["txtEditora"].toString(),
-                                                it.data["txtAnoPublicaca"].toString(),
-                                                it.id)
+                if (result != null) {
+                    result.forEach() {
+                        var aluno = Listalivros(
+                            it.data["avatar"].toString().toInt(),
+                            it.data["TituloLivro"].toString(),
+                            it.data["AutorLivro"].toString(),
+                            it.data["txtEditora"].toString(),
+                            it.data["txtAnoPublicaca"].toString(),
+                            it.id
+                        )
                         listaLivros.add(aluno)
                     }
                     val intent = Intent(this, Livros::class.java)
                     intent.putExtra("Biblioteca", listaLivros)
                     startActivity(intent)
-                }
-                else{
+                } else {
                     showMessage(this, "Não há alunos para exibir!")
 
                 }
+            }?.addOnFailureListener {
+                progressBar.visibility = View.GONE
+                showMessage(this, "Houve um erro na consulta de alunos!")
             }
-        }?.addOnFailureListener{
-            progressBar.visibility = View.GONE
-            showMessage(this,"Houve um erro na consulta de alunos!")
-
+        } else {
+            showMessage(this, "Sem conexão com a internet.")
         }
     }
 */

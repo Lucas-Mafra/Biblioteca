@@ -1,6 +1,11 @@
 package com.example.lol.biblioteca.activity.classes
 
-//DATA CLASS PARA O RV DOS LIVROS
+import android.net.Uri
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-data class Listalivros(var capa: Int, var titulo :String, var autor: String, var editora: String, var anoPublicacao: String, var id: String) {
+
+//DATA CLASS PARA O RV DOS LIVROS
+@Parcelize
+data class Listalivros(var capa: Int, var titulo :String, var autor: String, var editora: String, var anoPublicacao: String, var id: String): Parcelable {
 }
