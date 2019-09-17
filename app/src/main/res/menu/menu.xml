@@ -5,5 +5,11 @@
             android:icon="@drawable/ic_search_black_24dp"
             android:title="Search" app:actionViewClass="android.widget.SearchView" app:showAsAction="always"
             android:visible="true"/>
+    <item
+            android:id="@+id/menu_CadastrarLivro"
+            android:icon="@drawable/btnincluirlivro"
+            android:title="AddLivro"
+            app:showAsAction="always"
+            android:enabled="true" android:visible="true" android:checkable="false"/>
 
 </menu>

@@ -22,7 +22,6 @@ class MyAdapter(var lista : MutableList<Listalivros>) : RecyclerView.Adapter<MyA
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        holder.capa.setImageResource(lista[position].capa)
         holder.titulo.text = lista[position].titulo
         holder.autor.text = lista[position].autor
         holder.editora.text = lista[position].editora
@@ -33,7 +32,6 @@ class MyAdapter(var lista : MutableList<Listalivros>) : RecyclerView.Adapter<MyA
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        var capa = itemView.imgCapa
         var titulo = itemView.txtTitulo
         var autor = itemView.txtAutor
         var editora = itemView.txtEditora

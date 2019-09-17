@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.cadastro_activity.*
 //CLASS PARA A ACTIVITY DE CADASTRO
 
 class Cadastro : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cadastro_activity)

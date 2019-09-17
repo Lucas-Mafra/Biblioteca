@@ -25,47 +25,9 @@ class CadastrarLivro: AppCompatActivity() {
         }
     }
 
-    /* private fun consultarLivros() {
-        if (Util.isDeviceConnected(this)) {
-            val task = DataBase().consultar("Biblioteca")
-            val listaLivros = ArrayList<Listalivros>()
-            progressBar.visibility = View.VISIBLE
-            task?.addOnSuccessListener { result ->
-                progressBar.visibility = View.GONE
-                if (result != null) {
-                    result.forEach() {
-                        var aluno = Listalivros(
-                            it.data["avatar"].toString().toInt(),
-                            it.data["TituloLivro"].toString(),
-                            it.data["AutorLivro"].toString(),
-                            it.data["txtEditora"].toString(),
-                            it.data["txtAnoPublicaca"].toString(),
-                            it.id
-                        )
-                        listaLivros.add(aluno)
-                    }
-                    val intent = Intent(this, Livros::class.java)
-                    intent.putExtra("Biblioteca", listaLivros)
-                    startActivity(intent)
-                } else {
-                    showMessage(this, "Não há alunos para exibir!")
-
-                }
-            }?.addOnFailureListener {
-                progressBar.visibility = View.GONE
-                showMessage(this, "Houve um erro na consulta de alunos!")
-            }
-        } else {
-            showMessage(this, "Sem conexão com a internet.")
-        }
-    }
-*/
     private fun salvarLivro() {
-
         var avatar = (R.drawable.capa)
-
         var isValid: Boolean = verifyInputs()
-
         if (isValid) {
             val id = txtEditTituloLivro.text
                 .toString()
@@ -78,7 +40,6 @@ class CadastrarLivro: AppCompatActivity() {
                 .substring(0, txtEditEditora.text.toString().length)
 
             val livro = Listalivros(
-                avatar,
                 txtEditTituloLivro.text.toString(),
                 txtEditAutorLivro.text.toString(),
                 txtEditEditora.text.toString(),
@@ -106,10 +67,6 @@ class CadastrarLivro: AppCompatActivity() {
             showMessage(this, "Erro ao conectar a internet")
         }
     }
-
-
-
-
 
 
         fun clearFields() {

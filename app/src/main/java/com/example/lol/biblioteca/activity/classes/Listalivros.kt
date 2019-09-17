@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 
 //DATA CLASS PARA O RV DOS LIVROS
 @Parcelize
-data class Listalivros(var capa: Int, var titulo :String, var autor: String, var editora: String, var anoPublicacao: String, var id: String): Parcelable {
+data class Listalivros( var titulo :String = "", var autor: String = "", var editora: String = "", var anoPublicacao: String = "", var id: String = ""): Parcelable {
 }
