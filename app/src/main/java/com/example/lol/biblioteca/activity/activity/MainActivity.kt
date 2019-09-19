@@ -22,9 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private val  NEXT_ACTIVITY_REQUEST_CODE = 1
     private lateinit var login:EditText
-    var listaLivros = ArrayList<Listalivros>()
     private lateinit var senha :EditText
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,20 +36,16 @@ class MainActivity : AppCompatActivity() {
             var senha = senha?.text.toString()
 
             if (login == "login" && senha == "12345678") {
-                consultarLivros()
+
                 val params = Bundle()
                 params.putString("usuario", login)
                 val intent = Intent(this, Livros::class.java)
                 intent.putExtras(params)
-                intent.putExtra("ListaLivro", listaLivros)
-
-                startActivity(intent)
+                consultarLivros(intent)
 
             } else {
                 Toast.makeText(this, "login e/ou senha incorretos", Toast.LENGTH_LONG).show()
             }
-
-
         }
 
         CadastroAi.setOnClickListener{
@@ -71,26 +65,32 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private fun consultarLivros() {
+    private fun consultarLivros(intent: Intent){
+
+        val listaLivros = ArrayList<Listalivros>()
+
         if (Util.isDeviceConnected(this)) {
+
             val task = DataBase().consultar("Biblioteca")
 
             task?.addOnSuccessListener { result ->
 
                 if (result != null) {
                     result.forEach {
+
                         val livro = Listalivros(
-                            it.data["TituloLivro"].toString(),
-                            it.data["AutorLivro"].toString(),
-                            it.data["txtEditora"].toString(),
-                            it.data["txtAnoPublicaca"].toString(),
+                            it.data["titulo"].toString(),
+                            it.data["autor"].toString(),
+                            it.data["editora"].toString(),
+                            it.data["anoPublicacao"].toString(),
                             it.id
                         )
                         listaLivros.add(livro)
-                        Log.d("resultconsulta", livro.toString())
+
                     }
 
-                    intent.putExtra("Listalivro", listaLivros)
+                    intent.putExtra("ListaLivro", listaLivros)
+                    startActivity(intent)
                 } else {
                     Util.showMessage(this, "Não há alunos para exibir!")
 
@@ -101,9 +101,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             Util.showMessage(this, "Sem conexão com a internet.")
         }
+
+        Log.d("resultconsulta1", listaLivros.size.toString())
     }
-
-
 }
 
 
